@@ -18,6 +18,7 @@ char* bigEndian(char* number, int start, int length)
     
     //foreach recursion the returned number reference of the recursion is 
     //always the same so to make sure always assign the number to its address
+    //increments start by one and decrements length by one each recursion
     number = bigEndian(number, start + 1, length - 1);
     return number;
 }

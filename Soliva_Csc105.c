@@ -20,6 +20,9 @@ char* bigEndian(char* number, int length)
     //returns the address of the first element in the array
     return number;
 }
+
+//same process bigEndian
+
 char* littleEndian(char* number, int length)
 {
     char temporary;
