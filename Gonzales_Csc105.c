@@ -25,7 +25,7 @@ char* bigEndian(char* number, int start, int length)
 
 
     //the same thing for the bigEndian just reversed it again
-char * littleEndian(char* number, int start, int length)
+char* littleEndian(char* number, int start, int length)
 {
     char temporary;
     if (start > length)
@@ -59,10 +59,46 @@ int main(void)
     //passes zero as the first index and length - 1 for the last character
 
     resultBig = bigEndian(number, 0, length - 1);
-    printf("%s\n", resultBig);
+    printf("\n\nBig Endian:\n");
+    for (int i = 0; i < length; i++)
+    {
+        printf("--------");
+    }
+    printf("\n");
+
+    for(int i = 0; i < length; i++)
+    {
+
+        printf("|%c\t", resultBig[i]);
+    }
+
+     printf("|\n");
+    for (int i = 0; i < length; i++)
+    {
+        printf("--------");
+    }
+
+
 
     //resultLittle reference to littleEndian returned memory address for the reversed string
     //passes zero as the first index and length - 1 for the last character
     resultLittle = littleEndian(resultBig, 0, length - 1);
-    printf("%s\n", resultLittle);
+    printf("\n\n\nLittle Endian:\n\n");
+    for (int i = 0; i < length; i++)
+    {
+        printf("--------");
+    }
+    printf("\n");
+
+     for(int i = 0; i < length; i++)
+    {
+
+        printf("|%c\t", resultLittle[i]);
+    }
+    printf("|\n");
+    for (int i = 0; i < length; i++)
+    {
+        printf("--------");
+    }
+    printf("\n");
 }
