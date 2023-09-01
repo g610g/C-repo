@@ -1,17 +1,21 @@
 
-
 Sort(meals by minutes) : descending order
 Minutes = 0
 assign large pot on stove b and a
 While there are still meals:
-	mealsMintues -= 10minutes	
+
+		
 		if ( a large pot is free):
+			assignedmealsMinutes -= 10minutes
 			assign meal to free large pot
 			if (firstMealMinutes === secondMealMinutes):
 				minutes += firstmealMinutes 
 			else if(firstMealMinutes  > secondMealMinutes):
 				minutes += secondMealMinutes
 				firstMealMinutes-=secondMealMinutes
+			else:
+				mintues += firstMealMinutes
+				secondMealMinutes -= firstMealMinutes
 	decrement meal to put in large pot
 
 return minutes
