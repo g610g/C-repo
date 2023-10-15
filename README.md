@@ -1,2 +1,3 @@
 # C-repo
-Every C problemset starting 3rd year of college
+
+Every C and java problemset starting 3rd year of college
