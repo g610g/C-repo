@@ -58,10 +58,13 @@ public class List {
             {
                 break;
             }
-            // System.out.println("Current Node: " + currentNode.value);
             nextNode = currentNode.next;
         }
 
+    }
+    public void reverseList()
+    {
+        
     }
     private void insertSorting(Node currentNode)
     {

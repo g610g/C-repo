@@ -13,10 +13,19 @@ public class Multithread{
         myList.insertEnd(newNode2);
         myList.insertEnd(newNode3);
         myList.insertEnd(newNode4);
-        System.out.print("Unsorted list: ");
-        myList.printList();
         myList.sortList();
-        System.out.println("Sorted List:");
         myList.printList();
+        String name = "Gio Gonzales";
+        int[][] numbers = {{1,2,3}, {4,5,6,7,8,9}}; 
+        // System.out.println(addBetweenRecursion(5, 10));
     }
+    public static int addBetweenRecursion(int start, int end)
+    {
+        if (end == start)
+        {
+            return end;
+        }
+        return end + addBetweenRecursion(start, end - 1);
+    }
+
 }
