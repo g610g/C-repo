@@ -8,6 +8,7 @@ class Graph{
 
     Graph(int numberOfVertices)
     {
+        //array of linked list
         adjacentList = new LinkedList[numberOfVertices];
         visitedNodes = new HashSet<Integer> ();
         //initiate each index of the array of linkedList into a linkedList of integer
@@ -44,11 +45,15 @@ class Graph{
     }
     public static void main(String[] args) {
         Graph graph = new Graph(5);
-        graph.addEdge(1, 0);
-        graph.addEdge(1,2);
+        graph.addEdge(0, 1);
+        graph.addEdge(0,3);
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 4);
         graph.addEdge(2, 3);
-        graph.addEdge(3, 4);
-        graph.Dfs(3);
+        graph.addEdge(3, 1);
+        
+        
+        graph.Dfs(0);
     }
 
 }
